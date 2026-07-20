@@ -1,0 +1,555 @@
+/* =========================================================
+   ContactHub - Custom Styles (built on top of Bootstrap 5)
+   ========================================================= */
+
+:root {
+  --purple-1: #7C3AED;
+  --purple-2: #4F46E5;
+  --gradient-purple: linear-gradient(135deg, var(--purple-1) 0%, var(--purple-2) 100%);
+
+  --blue-total: #3B82F6;
+  --orange-fav: #F59E0B;
+  --red-emg: #EF4444;
+
+  --text-dark: #1F2937;
+  --text-muted: #6B7280;
+  --border-light: #E5E7EB;
+  --bg-input: #F3F4F6;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+}
+
+/* ---------- Page background ---------- */
+.page-bg {
+  min-height: calc(100vh - 88px);
+  background-color: #F5F6FA;
+  background-image:
+    radial-gradient(circle at 15% 90%, rgba(59, 130, 246, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 95%, rgba(16, 185, 129, 0.08), transparent 40%);
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.brand-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--gradient-purple);
+  color: #fff;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 1.45rem;
+  color: var(--text-dark);
+}
+
+.text-gradient {
+  background: var(--gradient-purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.btn-gradient {
+  background: var(--gradient-purple);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1.1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.25);
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.btn-gradient:hover,
+.btn-gradient:focus {
+  color: #fff;
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+}
+
+.icon-btn:hover {
+  background-color: #E5E7EB;
+}
+
+.avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ---------- Stat Cards ---------- */
+.stat-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.bg-total { background-color: var(--blue-total); }
+.bg-favorites { background-color: var(--orange-fav); }
+.bg-emergency { background-color: var(--red-emg); }
+
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* ---------- Section Titles ---------- */
+.section-title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--text-dark);
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ---------- Search ---------- */
+.search-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 1.1rem;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.search-input {
+  background-color: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.search-input:focus {
+  border-color: var(--purple-1);
+  box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.15);
+}
+
+/* ---------- Empty State ---------- */
+.empty-state {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 4rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.empty-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  background-color: #F3F4F6;
+  color: #9CA3AF;
+  font-size: 1.75rem;
+}
+
+.empty-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
+.empty-subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Sidebar Cards ---------- */
+.sidebar-card {
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-card-favorites {
+  background-color: #FFFBEB;
+  border: 1px solid #FDE9C8;
+}
+
+.sidebar-card-emergency {
+  background-color: #FEF2F2;
+  border: 1px solid #FCD9D9;
+}
+
+.sidebar-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.sidebar-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.sidebar-empty {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  padding: 1rem 0 0.25rem;
+}
+
+/* ---------- Contact Cards (populated by JS) ---------- */
+.contact-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card-body {
+  flex-grow: 1;
+}
+
+/* avatar square with initials + small overlapping favorite/emergency badges */
+.avatar-wrapper {
+  position: relative;
+  width: 56px;
+}
+
+.contact-avatar-initials {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.avatar-badge {
+  position: absolute;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.62rem;
+  color: #fff;
+}
+
+.avatar-badge-favorite {
+  top: -6px;
+  background-color: var(--orange-fav);
+}
+
+.avatar-badge-emergency {
+  bottom: -6px;
+  background-color: var(--red-emg);
+}
+
+.contact-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
+/* small colored square icon + text row, reused for phone/email/address */
+.info-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.info-icon-phone { background-color: #DBEAFE; color: #2563EB; }
+.info-icon-email { background-color: #EDE9FE; color: #7C3AED; }
+.info-icon-address { background-color: #D1FAE5; color: #059669; }
+
+.info-text {
+  font-size: 0.88rem;
+  color: #374151;
+  word-break: break-word;
+}
+
+.contact-group-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background-color: #F3E8FF;
+  color: var(--purple-1);
+  margin-top: 0.15rem;
+}
+
+/* footer strip: call/email quick actions on the left, toggle/edit/delete on the right */
+.contact-card-footer {
+  border-top: 1px solid var(--border-light);
+  background-color: #FAFAFB;
+}
+
+.quick-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 0.85rem;
+}
+
+.quick-call { background-color: #D1FAE5; color: #059669; }
+.quick-email { background-color: #EDE9FE; color: #7C3AED; }
+
+.quick-btn:hover { opacity: 0.85; }
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #F3F4F6;
+  color: #9CA3AF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  font-size: 0.8rem;
+}
+
+.action-btn.delete-btn:hover {
+  background-color: #FEE2E2;
+  color: var(--red-emg);
+}
+
+.action-btn.edit-btn:hover {
+  background-color: #EDE9FE;
+  color: var(--purple-1);
+}
+
+.action-btn.favorite-btn.active {
+  background-color: #FEF3C7;
+  color: var(--orange-fav);
+}
+
+.action-btn.emergency-btn.active {
+  background-color: #FEE2E2;
+  color: var(--red-emg);
+}
+
+/* mini contact row shown inside the Favorites/Emergency sidebar cards —
+   each one is its own small white card sitting on top of the tinted
+   parent background */
+.sidebar-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 0.65rem 0.75rem;
+  margin-top: 0.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-avatar-initials {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sidebar-contact-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.1rem;
+}
+
+.sidebar-contact-phone {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.sidebar-call-btn {
+  color: #DC2626;
+  transition: all 0.4s ease;
+}
+
+.sidebar-call-btn:hover {
+  opacity: 0.6;
+}
+
+/* ---------- Modal ---------- */
+.modal-content {
+  border-radius: 18px;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-light);
+  padding: 1.25rem 1.5rem;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  border-top: none;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.custom-input {
+  background-color: var(--bg-input);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 0.65rem 1rem;
+  font-size: 0.92rem;
+}
+
+.custom-input:focus {
+  background-color: #fff;
+  border-color: var(--purple-1);
+  box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.15);
+}
+
+textarea.custom-input {
+  resize: none;
+}
+
+.photo-preview {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #60A5FA, #3B82F6);
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.change-photo-btn {
+  background-color: #F3F4F6;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  color: var(--text-dark);
+  border: none;
+}
+
+.change-photo-btn:hover {
+  background-color: #E5E7EB;
+}
+
+.form-check-input:checked {
+  background-color: var(--purple-1);
+  border-color: var(--purple-1);
+}
+
+.cancel-btn {
+  background-color: #F3F4F6;
+  border-radius: 10px;
+  padding: 0.6rem 1.3rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  border: none;
+}
+
+.cancel-btn:hover {
+  background-color: #E5E7EB;
+}
+
+#saveContactBtn {
+  padding: 0.6rem 1.4rem;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 767.98px) {
+  .stat-card {
+    padding: 1rem;
+  }
+  .section-title {
+    font-size: 1.35rem;
+  }
+  .empty-state {
+    padding: 2.5rem 1rem;
+  }
+}
